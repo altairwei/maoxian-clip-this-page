@@ -1,0 +1,28 @@
+
+{
+  "manifest_version": 2,
+  "name": "MaoXian clip this page",
+  "version": "0.0.1",
+  "description": "A thirdparty extention example",
+
+  "background": {
+    "scripts": [
+      "vendor/js/browser-polyfill.js",
+      "js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "vendor/js/browser-polyfill.js",
+        "vendor/js/mx-wc-tool-v0.0.7.js",
+        "js/content.js"
+      ],
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "<all_urls>"
+  ]
+}
